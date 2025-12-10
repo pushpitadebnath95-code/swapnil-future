@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Pridiction</title>
+<link rel="stylesheet" href="H2style.css">
+<style>
+    body{
+        margin: 0;
+        font-family: 'Poppins',sans-serif;
+        background-color: #351a97;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+    }
+    .card{
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 350px;
+        height: 320px;
+    }
+    .card img{
+        width: 120px;
+        margin-bottom: 15px;
+    }
+    h2{
+        font-size: 24px;
+        margin-top: 10px0;
+    }
+    .btn-container{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    button{
+        padding: 10px 25px;
+        font-size: 16px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    #yesBtn{
+        background-color: #ff3636;
+        color: rgb(255, 255, 255);
+    }
+    #noBtn{
+        background-color: #5355eb;
+    }
+    #message{
+        font-size: 22px;
+        margin-top: 20px;
+        color: #ff577f;
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <div class="card">
+        <img src="cat1.png" alt="Future Pridiction">
+        <h2>Wellcome to swapnil future Pridiction</h2>
+        <p>Are you sure</p>
+    <div class="btn-container">
+        <button id="yesBtn"><a href="H2.html">Yes</a></button>
+        <button id="noBtn">No</button>
+    </div>
+    <div>press yes or no</div>
+    </div>
+
+    <script>
+        const yesBtn= document.getElementById('yesBtn');
+        const noBtn= document.getElementById('noBtn');
+        const message= document.getElementById('message');
+        yesBtn.addEventListener('click',() => {
+            message.style.display='block';
+        });
+
+        noBtn.addEventListener('mouseover',()=>{
+            const x =Math.random()*(window.innerWidth-100);
+            const y =Math.random()*(window.innerHeight-100);
+            noBtn.style.position='absolute';
+            noBtn.style.left=`${x}px`;
+            noBtn.style.top=`${y}px`;
+        });
+    </script>
+</body>
+</html>
